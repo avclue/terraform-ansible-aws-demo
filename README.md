@@ -46,9 +46,16 @@ State path: terraform.tfstate
 
 Outputs:
 
-public_ip = "54.244.182.121"
+public_dns = "ec2-54-213-5-156.us-west-2.compute.amazonaws.com"
+public_ip = "54.213.5.156"
+tags = tomap({
+  "Environment" = "Demo"
+})
+
 ```
-Of course, your IP will be different.
+Your IP and DNS name will be different.
+
+### Make sure you note the public_ip or the public_dns so you can connect to the webserver.
 
 ## ansible playbook to provision the webserver on the new generic instance.
 
@@ -64,6 +71,8 @@ Actual ansible command:
 ```shell
 ansible-playbook playbook.yml
 ```
+
+At this point, you can put the public_ip in your browser, and you'll be able to see the static page we deployed with ansible.
 
 Then finally:
 
