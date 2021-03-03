@@ -55,7 +55,7 @@ tags = tomap({
 ```
 Your IP and DNS name will be different.
 
-### Make sure you note the public_ip or the public_dns so you can connect to the webserver.
+#### Make sure you note the public_ip or the public_dns so you can connect to the webserver.
 
 ## ansible playbook to provision the webserver on the new generic instance.
 
